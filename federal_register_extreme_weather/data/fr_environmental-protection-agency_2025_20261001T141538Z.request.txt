@@ -1,0 +1,13 @@
+Full request URL:
+https://www.federalregister.gov/api/v1/documents.json?conditions%5Btype%5D%5B%5D=RULE&conditions%5Btype%5D%5B%5D=PRORULE&conditions%5Bpublication_date%5D%5Bgte%5D=2025-01-01&conditions%5Bpublication_date%5D%5Blte%5D=2025-12-31&conditions%5Bagencies%5D%5B%5D=environmental-protection-agency&per_page=100&order=newest
+
+Parameters:
+  conditions[type][] = RULE
+  conditions[type][] = PRORULE
+  conditions[publication_date][gte] = 2025-01-01
+  conditions[publication_date][lte] = 2025-12-31
+  conditions[agencies][] = environmental-protection-agency
+  per_page = 100
+  order = newest
+
+Fetched at (UTC): 2026-10-01T14:15:38.012935+00:00
