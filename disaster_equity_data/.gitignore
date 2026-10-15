@@ -1,0 +1,5 @@
+# Raw source data is large (up to 417MB) and reproducible from the documented
+# URLs in data/<source>/README.md — only the aggregated/ outputs are tracked.
+data/openfema/*.jsonl
+data/ejscreen/*.csv
+data/cejst/*.csv
