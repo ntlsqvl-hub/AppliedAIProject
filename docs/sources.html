@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sources &middot; Disaster Recovery Equity Project</title>
+<meta name="description" content="Where this project's data comes from, and how it was obtained from each origin site.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;650;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="navbar">
+  <div class="navbar-inner">
+    <a class="brand" href="index.html">Disaster Recovery Equity Project</a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="index.html#data">Data</a>
+      <a href="#top" class="active">Sources</a>
+      <a href="https://github.com/ntlsqvl-hub/AppliedAIProject" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="page-header" id="top">
+    <p class="eyebrow">Methodology</p>
+    <h1>Where this data comes from</h1>
+    <p class="section-note">
+      Four external sources feed this project. Each entry below names the origin site, briefly
+      describes how the data was obtained from it, and links out to that original source directly.
+      For where the resulting files live in this project's own repository, see the
+      <a href="index.html">Home</a> page.
+    </p>
+  </section>
+
+  <section class="content">
+    <ul class="source-detail-list">
+      <li class="source-detail">
+        <div class="source-detail-head">
+          <h2>OpenFEMA</h2>
+          <a class="origin-link" href="https://www.fema.gov/about/openfema" target="_blank" rel="noopener">fema.gov/about/openfema &#8599;</a>
+        </div>
+        <p>
+          FEMA's own Public Assistance and Hazard Mitigation funding records, broken out by state,
+          disaster, and program.
+        </p>
+        <p class="obtained">
+          <strong>How it was obtained:</strong> queried directly from OpenFEMA's public REST API
+          (<code>PublicAssistanceFundedProjectsSummaries</code> and <code>HmaSubapplications</code>
+          endpoints), filtering on declaration date and fiscal year to the 2017&ndash;2026 window, with
+          no authentication required.
+        </p>
+      </li>
+
+      <li class="source-detail">
+        <div class="source-detail-head">
+          <h2>CEJST</h2>
+          <a class="origin-link" href="https://public-environmental-data-partners.github.io/j40-cejst-2/en/" target="_blank" rel="noopener">public-environmental-data-partners.github.io &#8599;</a>
+        </div>
+        <p>
+          The Climate and Economic Justice Screening Tool, which flags census tracts as disadvantaged
+          based on environmental, health, and economic burden indicators.
+        </p>
+        <p class="obtained">
+          <strong>How it was obtained:</strong> the original CEQ-hosted tool was taken offline; this
+          project downloaded the Version 2.0 communities CSV directly from the Public Environmental
+          Data Partners' community-maintained mirror's public downloads page.
+        </p>
+      </li>
+
+      <li class="source-detail">
+        <div class="source-detail-head">
+          <h2>EJSCREEN</h2>
+          <a class="origin-link" href="https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/RLR5AX" target="_blank" rel="noopener">dataverse.harvard.edu &#8599;</a>
+        </div>
+        <p>
+          EPA's environmental justice screening tool, combining pollution and demographic indicators
+          at the census block-group level.
+        </p>
+        <p class="obtained">
+          <strong>How it was obtained:</strong> EPA discontinued public access to EJSCREEN in February
+          2025; this project downloaded the Version 4.0 (2024) national block-group file directly from
+          Harvard Dataverse's file-access API, where a researcher had archived EPA's own release.
+        </p>
+      </li>
+
+      <li class="source-detail">
+        <div class="source-detail-head">
+          <h2>Federal Register</h2>
+          <a class="origin-link" href="https://www.federalregister.gov/developers/documentation/api/v1" target="_blank" rel="noopener">federalregister.gov/developers &#8599;</a>
+        </div>
+        <p>
+          The official daily journal of federal agency rules, proposed rules, and notices.
+        </p>
+        <p class="obtained">
+          <strong>How it was obtained:</strong> queried via the Federal Register's public REST API,
+          filtering to EPA Rules and Proposed Rules published in 2025 that mention &quot;extreme
+          weather&quot; or &quot;community&quot; in their full text, with no authentication required.
+        </p>
+      </li>
+    </ul>
+  </section>
+</main>
+
+<footer>
+  Disaster Recovery Equity Project &middot;
+  <a href="https://github.com/ntlsqvl-hub/AppliedAIProject" target="_blank" rel="noopener">Source repository</a>
+</footer>
+
+</body>
+</html>
