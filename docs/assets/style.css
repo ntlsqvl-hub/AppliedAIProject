@@ -195,6 +195,16 @@ figcaption {
   font-size: 14.5px;
   display: block;
   margin-bottom: 4px;
+  color: var(--accent);
+}
+.source-list .source-name:hover {
+  text-decoration: underline;
+}
+.source-list .source-name::after {
+  content: " \2197";
+  font-weight: 400;
+  font-size: 12px;
+  color: var(--text-muted);
 }
 
 .source-list .source-desc {
