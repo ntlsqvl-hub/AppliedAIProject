@@ -1,0 +1,7 @@
+Dataset,Source,Time range,Records,Granularity
+FEMA Public Assistance,OpenFEMA API,2017-2026,"50,071",Project / disaster
+FEMA Hazard Mitigation,OpenFEMA API,2017-2026,"26,289",Subapplication
+CEJST (vulnerability),PEDP mirror (v2.0),Current,"74,134",Census tract
+EJSCREEN (environmental justice),Harvard Dataverse (v4.0),2024,"243,022",Census block group
+Federal Register (EPA rules),Federal Register API,2025,147,Rule / Proposed Rule
+State case-study documents,"GAO, legislative & agency records",2017-2026,62,Document (6 states)
